@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>JS Bin Clone</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.png">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+    <div id="container">
+      <header>
+
+        <div id="logo">
+          <img src="img/x.png" alt="x" id="x">
+          <img src="img/logo.png" alt="" id="logo-img">
+          <a href="index.html" id="new-bin">New bin</a>
+        </div><!-- end logo -->
+
+        <div id="features">
+          <ul>
+            <li><a href="#">JS Bin features</a><span> »</span></li>
+            <li><a href="#">Getting started</a></li>
+            <li><a href="#">Keyboard Shortcuts</a></li>
+            <li><a href="#">Exporting/importing gist</a></li>
+            <li><label><input type="checkbox" name="mode" value="editor-mode"> Textarea editor mode</label></li>
+          </ul>
+        </div>
+
+        <div id="pro-features">
+          <ul>
+            <li><a href="#">Pro features</a><span> »</span></li>
+            <li><a href="#">Private bins</a></li>
+            <li><a href="#">Dropbox backup</a></li>
+            <li><a href="#">Vanity URLs</a></li>
+          </ul>
+          <button name="button" type="button" id="pro">Upgrade to pro now</button>
+        </div>
+
+        <div id="blog-help">
+          <ul>
+            <li><a href="#">Blog</a><span> »</span></li>
+            <li><a href="#">Live reloading CSS</a></li>
+          </ul>
+
+          <ul>
+            <li><a href="#">Help</a><span> »</span></li>
+            <li><a href="#">How to disable JS Bin keyboard shortcuts</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div id="donate">
+          <ul>
+            <li><a href="#">Donate to JS Bin ❤ </a><span> »</span></li>
+            <li><a href="#">Support JS Bin to keep the project open source & MIT for all</a></li>
+            <li><a href="#">Follow @js_bin on twitter</a></li>
+          </ul>
+        </div>
+
+        <blockquote>
+          <p>“Everyone should learn how to program a computer because it teaches you how to think” — <span>Steve Jobs</span></p>
+        </blockquote>
+
+      </header>
+    <section id="main">
+
+      <div id="toolBar">
+
+        <div id="toolBar-left">
+          <div id="menu">
+            <a href="#" id="file">File</a>
+            <img src="img/black_arrow.png" alt="">
+            <ul id="file-menu">
+              <li><a href="#">New</a></li>
+              <li><a href="#">Make bin private<span class="pro">PRO</span></a></li>
+              <li><a href="#">Delete<span>ctrl+shift+del</span></a></li>
+              <li><a href="#">Archive<span>ctrl+y</span></a></li>
+              <li><a href="#">Add description</a></li>
+              <li><a href="#">Save snapshot<span>ctrl+s</span></a></li>
+              <li><a href="#">Clone</a></li>
+              <li><a href="#">Publish to vanity homepage<span class="pro">PRO</span></a></li>
+              <li><a href="#">Export as gist</a></li>
+              <li><a href="#">Download</a></li>
+              <li><a href="#">Save as template</a></li>
+            </ul>
+          </div><!-- end menu and file dropdown -->
+
+          <div id="library">
+            <a href="#">Add library</a>
+          </div><!-- end library -->
+
+          <div id="share"><a href="#">Share</a></div>
+          <img id="share-img" src="img/share.png" alt="">
+        </div><!-- end toolBar-left -->
+
+        <div id="toolBar-middle">
+          <div id="html-view" class="selected"><a href="#">HTML</a></div>
+          <div id="css-view"><a href="#">CSS</a></div>
+          <div id="javaScript-view"><a href="#">JavaScript</a></div>
+          <div id="console-view"><a href="#">Console</a></div>
+          <div id="output-view" class="selected"><a href="#">Output</a></div>
+        </div><!-- end toolBar-middle -->
+
+        <div id="toolBar-right">
+          <div id="toolBar-right-container">
+          <div id="login"><a href="#">Login or Register</a></div>
+          <img id="login-img" src="img/login.png" alt="">
+          <div id="blog"><a href="#">Blog</a></div>
+          <div id="help"><a href="#">Help</a></div><!-- Dropdown Menu  -->
+          </div><!-- end toolBar-right-container -->
+        </div><!-- end toolBar-right -->
+
+      </div><!-- end toolBar -->
+
+      <div id="code">
+
+        <div class="codeBlock" id="html">
+          <div class="selected"><a href="#" id="html-link">HTML</a>
+          <img src="img/blue_arrow.png" alt="">
+            <img id="html-img" src="img/html.png" alt="">
+            <textarea rows="34" id="htmlCode"></textarea>
+        </div>
+      </div><!-- end html codeBlock -->
+
+      <div class="codeBlock" id="css">
+        <div><a href="#" id="css-link">CSS</a>
+        <img src="img/blue_arrow.png" alt="">
+            <img id="css-img" src="img/css.png" alt="">
+      </div>
+        <textarea rows="34" id="cssCode"></textarea>
+      </div><!-- end css codeBlock -->
+
+      <div class="codeBlock" id="javaScript">
+        <div><a href="#" id="js-link">JavaScript</a>
+        <img src="img/blue_arrow.png" alt="">
+            <img id="js-img" src="img/js.png" alt="">
+      </div>
+        <textarea rows="34" id="jsCode"></textarea>
+      </div><!-- end js codeBlock -->
+
+      <div class="codeBlock" id="console">
+        <span>Console</span>
+        <img src="img/console_arrow.png" alt="">
+        <button name="button" type="button" id="clear">Clear</button>
+        <textarea rows="34"></textarea>
+      </div><!-- end console codeBlock -->
+
+      <div class="codeBlock" id="output">
+        <span>Output</span>
+          <button name="button" type="button" id="run-js">Run with JS</button>
+          <label>Auto-run JS <input type="checkbox" name="auto" value="auto-run-js"></label>
+            <iframe height="760" width="360" id="outputFrame"></iframe>
+          <a href="#" id="bin-info">Bin info</a>
+        </div><!-- end output codeBlock -->
+
+      </div><!-- end code -->
+
+    </section><!-- end main -->
+    </div><!-- end container -->
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>

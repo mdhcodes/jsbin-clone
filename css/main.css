@@ -1,0 +1,433 @@
+/*===== GENERAL =====*/
+
+* {
+box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #222;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+    min-width: 66.25em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link,
+a:visited {
+    color: #6293d3;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* ====== HEADER ====== */
+
+header {
+    background-color: #ecf2fa;
+    height: 13.5em;
+    padding: 1em;
+    color: #6293d3;
+    overflow: hidden;
+}
+
+#x {
+    position: relative;
+    top: -2.1em;
+    left: 0.6em;
+}
+
+#logo-img {
+    margin: -0.3em 0 0 2.6em;
+}
+
+#logo {
+    display: block;
+    width: 10em;
+    height: 12.5em;
+    margin: 0 5.8em 0 0;
+    float: left;
+}
+
+#new-bin {
+    display: block;
+    margin: 1em 0 0 0.6em;
+    padding: 0.6em 0;
+    width: 11em;
+    border: 1px solid #6293d3;
+    background-color: #ecf2fa;
+    color: #6293d3;
+    text-align: center;
+}
+
+#features,
+#pro-features,
+#blog-help,
+#donate,
+blockquote {
+    float: left;
+    width: 15em;
+    height: 12.5em;
+    margin-right: 2.6em;
+}
+
+header li {
+    margin: 0 0 0.6em 0;
+}
+
+#blog-help ul:last-child {
+    margin-top: 1.5em;
+}
+
+#features li:first-child,
+#pro-features li:first-child,
+#blog-help li:first-child,
+#donate li:first-child {
+    font-weight: bold;
+}
+
+#features span,
+#pro-features span,
+#blog-help span,
+#donate span {
+    font-weight: normal;
+}
+
+#features li:last-child {
+    margin: 3.5em 0 0 0;
+}
+
+#pro {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    width: 15.5em;
+    padding: 0.7em;
+    margin: 1.4em 0 0 0;
+}
+
+blockquote {
+    color: initial;
+    margin: 0 0 0;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+blockquote span {
+    color: #888;
+}
+
+
+/*===== TOOLBAR =====*/
+
+#toolBar {
+    margin: 0 auto;
+    width: 100%;
+    height: 2.8em;
+    background-color: #eeeeee;
+    border-top: 1px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+#toolBar-left,
+#toolBar-middle,
+#toolBar-right {
+    float: left;
+    width: 33%;
+}
+
+#menu,
+#library,
+#share {
+    display: inline-block;
+    margin: 0.6em 0 0 1em;
+    position: relative;
+}
+
+#menu a,
+#library a,
+#share a {
+    color: #222;
+}
+
+#menu img {
+    margin-top: -0.2em;
+}
+
+#toolBar-middle {
+    text-align: center;
+}
+
+#html-view,
+#css-view,
+#javaScript-view,
+#console-view,
+#output-view {
+    display: inline-block;
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+    padding: 0.4em;
+    margin: 0.18em 0 0 0;
+}
+
+#html-view a,
+#css-view a,
+#javaScript-view a,
+#console-view a,
+#output-view a {
+    color: #222;
+}
+
+#html-view.selected,
+#css-view.selected,
+#javaScript-view.selected,
+#console-view.selected,
+#output-view.selected {
+    background-color: #EAF3FF;
+}
+
+#html-view:hover,
+#css-view:hover,
+#javaScript-view:hover,
+#console-view:hover,
+#output-view:hover {
+    background-color: #eaf3ff;
+}
+
+#toolBar-right {
+    text-align: right;
+}
+
+#login,
+#blog,
+#help {
+    display: inline-block;
+    margin: 0.6em 1em 0 0;
+}
+
+#login a,
+#blog a,
+#help a {
+    color: #222;
+}
+
+#login a {
+    padding: 0.4em 0.5em;
+    background-color: #ffeb3b;
+    border-radius: 1px;
+}
+
+
+/*===== TOOLBAR IN ACTION =====*/
+
+#file-menu {
+    position: absolute;
+    background-color: #fff;
+    width: 20em;
+    margin: 0.8em 0 0 -1em;
+    box-shadow: 0 0 5px #bfbfbf;
+    display: none;
+}
+
+#file-menu li {
+    margin: 0 0.5em;
+    padding: 0 0 1em 0;
+}
+
+#file-menu li:first-child {
+    padding-top: 1em;
+}
+
+#file-menu li:nth-child(4) {
+    border-bottom: 1px solid #bfbfbf;
+    padding-bottom: 0.5em;
+}
+
+#file-menu li:nth-child(5) {
+    padding-top: 0.5em;
+}
+
+#file-menu li:nth-child(7) {
+    border-bottom: 1px solid #bfbfbf;
+    padding-bottom: 0.5em;
+}
+
+#file-menu li:nth-child(8) {
+    padding-top: 0.5em;
+}
+
+#file-menu li span {
+    display: block;
+    text-align: right;
+    margin: -1.3em 0 0 0;    
+}
+
+#file-menu span.pro {
+    display: block;
+    width: 2.5em;
+    margin: -1.2em 0 0 19em;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 0.875em;
+    border-radius: 5px;
+    padding: 0.2em;
+}
+
+#share-img {
+    position: absolute;
+    display: block;
+    margin: 1em 0 0 11em;
+    display: none;
+}
+
+#toolBar-right-container {
+    position: relative;
+}
+
+#login-img {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 2.2em;
+    left: 9.5em;
+    display: none;
+}
+
+#html-img,
+#css-img,
+#js-img {
+    display: none;
+}
+
+
+/*===== Code =====*/
+
+#code {
+    width: 100%;
+    overflow: auto;
+    clear: both;
+}
+
+.codeBlock {
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #bfbfbf;
+}
+
+textarea {
+    background-color: #f7f7f7;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#html,
+#css,
+#javaScript,
+#console,
+#output {
+    background-color: #f7f7f7;
+    padding: 0.5em 0 0 0;
+    float: left;
+}
+
+#html a,
+#css a,
+#javaScript a {
+    font-weight: 700;
+}
+
+#html a,
+#css a,
+#javaScript a,
+#console,
+#output {
+    padding-left: 0.5em;
+}
+
+#html.selected,
+#css.selected,
+#javaScript.selected,
+#console.selected,
+#output.selected {
+ background-color: #fff;
+}
+
+#output,
+#console {
+    color: #7b7b7b;
+    font-weight: 700;
+}
+
+#console,
+#output {
+    position: relative;
+}
+
+#console img {
+    position: absolute;
+    top: 2.5em;
+    left: 0.3em;
+}
+
+#console button {
+    float: right;
+    color: initial;
+    font-weight: normal;
+    font-size: 1.2em;
+    margin-right: 0.5em;
+}
+
+#output button {
+    color: initial;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+#output button {    
+    margin: 0 0 0 1em;
+}
+
+#output label {
+    margin: 0 0 0 0.5em;
+    color: initial;
+    font-weight: initial;
+}
+
+iframe {    
+    border: none;
+}
+
+#bin-info {
+    color: initial;
+    font-weight: initial;
+    padding: 0.5em 0.5em 1em 0.5em;
+    font-size: 1.4em;
+    border-radius: 2px;
+    box-shadow: 0 0 4px #bfbfbf;
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.5em;
+}
