@@ -1,157 +1,101 @@
-/* Display ToolBar File Menu */
+/* Display Menu */
+
+var visible = false;
+
+var displayMenu = function(action, target) {
+
+    action.onclick = function() {
+
+        if(visible) {
+            target.style.display = "none";
+            action.style.backgroundColor = "initial";
+            visible = false;
+        } else {
+            target.style.display = "block";
+            action.style.backgroundColor = "#fff";
+            visible = true;
+        }
+    }
+
+};
+
+
+
+/* Click on Menu to Hide Menu */
+
+var hideMenu = function(action, target, link) {
+
+    action.onclick = function() {
+        target.style.display = "none";
+        link.style.backgroundColor = "initial";
+        visible = false;
+    }
+};
+
+
+/* Display / Hide ToolBar File Menu */
 
 var fileLink = document.getElementById("file");
 var fileMenu = document.getElementById("file-menu");
-var visible = false;
 
-fileLink.onclick = function() {
-    
-    if(visible) {
-        fileMenu.style.display="none";
-        visible = false;
-    } else {
-        fileMenu.style.display="block";
-        visible = true;
-    }    
-
-    fileMenu.onclick = function() {
-       
-        fileMenu.style.display = "none";
-        visible = false;               
-    };
-    
-};
+displayMenu(fileLink, fileMenu);
+hideMenu(fileMenu, fileMenu, fileLink);
 
 
-
-/* Display ToolBar Share Menu */
+/* Display / Hide ToolBar Share Menu */
 
 var shareLink = document.getElementById("share");
-var shareImage = document.getElementById("share-img");
-var visible = false;
+var shareMenu = document.getElementById("share-img");
 
-shareLink.onclick = function() {
-    
-    if(visible) {
-        shareImage.style.display="none";
-        visible = false;
-    } else {
-        shareImage.style.display="block";
-        visible = true;
-    }    
-
-    shareImage.onclick = function() {
-       
-        shareImage.style.display = "none";
-        visible = false;               
-    };
-    
-};
+displayMenu(shareLink, shareMenu);
+hideMenu(shareMenu, shareMenu, shareLink);
 
 
-
-/* Display Login Menu */
+/* Display / Hide Login Menu */
 
 var loginLink = document.getElementById("login");
-var loginImage = document.getElementById("login-img");
-var visible = false;
+var loginMenu = document.getElementById("login-img");
 
-loginLink.onclick = function() {
-    
-    if(visible) {
-        loginImage.style.display="none";
-        visible = false;
-    } else {
-        loginImage.style.display="block";
-        visible = true;
-    }    
-
-    loginImage.onclick = function() {
-       
-        loginImage.style.display = "none";
-        visible = false;               
-    };
-    
-};
+displayMenu(loginLink, loginMenu);
+hideMenu(loginMenu, loginMenu, loginLink);
 
 
-
-/* Display HTML Menu */
+/* Display / Hide HTML Menu */
 
 var htmlLink = document.getElementById("html-link");
-var htmlImage = document.getElementById("html-img");
-var visible = false;
+var htmlMenu = document.getElementById("html-img");
 
-htmlLink.onclick = function() {
-    
-    if(visible) {
-        htmlImage.style.display="none";
-        visible = false;
-    } else {
-        htmlImage.style.display="block";
-        visible = true;
-    }    
-
-    htmlImage.onclick = function() {
-       
-        loginImage.style.display = "none";
-        visible = false;               
-    };
-    
-};
+displayMenu(htmlLink, htmlMenu);
+hideMenu(htmlMenu, htmlMenu, htmlLink);
 
 
-
-
-/* Display CSS Menu */
+/* Display / Hide CSS Menu */
 
 var cssLink = document.getElementById("css-link");
-var cssImage = document.getElementById("css-img");
-var visible = false;
+var cssMenu = document.getElementById("css-img");
 
-cssLink.onclick = function() {
-    
-    if(visible) {
-        cssImage.style.display="none";
-        visible = false;
-    } else {
-        cssImage.style.display="block";
-        visible = true;
-    }    
-
-    cssImage.onclick = function() {
-       
-        cssImage.style.display = "none";
-        visible = false;               
-    };
-    
-};
+displayMenu(cssLink, cssMenu);
+hideMenu(cssMenu, cssMenu, cssLink);
 
 
+/* Display / Hide JavaScript Menu */
 
-/* Display JavaScript Menu */
+var jsLink = document.getElementById("js-link");
+var jsMenu = document.getElementById("js-img");
 
-var javaScriptLink = document.getElementById("js-link");
-var javaScriptImage = document.getElementById("js-img");
-var visible = false;
+displayMenu(jsLink, jsMenu);
+hideMenu(jsMenu, jsMenu, jsLink);
 
-javaScriptLink.onclick = function() {
-    
-    if(visible) {
-        javaScriptImage.style.display="none";
-        visible = false;
-    } else {
-        javaScriptImage.style.display="block";
-        visible = true;
-    }    
 
-    javaScriptImage.onclick = function() {
-       
-        javaScriptImage.style.display = "none";
-        visible = false;               
-    };
-    
-};
+/* Display / Hide Help Menu */
 
+var helpLink = document.getElementById("help");
+var helpMenu = document.getElementById("help-img");
+
+displayMenu(helpLink, helpMenu);
+hideMenu(helpMenu, helpMenu, helpLink);
+
+
+/* Toggle CodeBlocks */
 
 

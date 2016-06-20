@@ -158,22 +158,32 @@ blockquote span {
     width: 33%;
 }
 
-#menu,
+#menu {
+    display: inline-block;
+    margin-left: 1em;
+}
+
 #library,
 #share {
     display: inline-block;
-    margin: 0.6em 0 0 1em;
+    margin: 0.2em 0 0 1em;
+    padding: 0.6em 0.5em 0.6em;
     position: relative;
 }
 
-#menu a,
-#library a,
-#share a {
+#file {
+    margin: 0.2 0 0 1em;
+    padding: 0.6em 0.5em 0.6em;
+}
+
+#file a {
     color: #222;
 }
 
-#menu img {
-    margin-top: -0.2em;
+#library a,
+#share a {
+    color: #222;
+    padding: 0.7em;
 }
 
 #toolBar-middle {
@@ -231,12 +241,19 @@ blockquote span {
 #blog a,
 #help a {
     color: #222;
+    padding: 0.8em;
 }
 
-#login a {
-    padding: 0.4em 0.5em;
+#help {
+    margin: 0.4em 1em 0 0;
+    padding:0.5em;
+}
+
+#login {
+    margin: 0.4em 1em 0 0;
+    padding:0.5em;
     background-color: #ffeb3b;
-    border-radius: 1px;
+    border-radius: 3px;
 }
 
 
@@ -246,7 +263,7 @@ blockquote span {
     position: absolute;
     background-color: #fff;
     width: 20em;
-    margin: 0.8em 0 0 -1em;
+    margin: 0.2em 0 0 -1em;
     box-shadow: 0 0 5px #bfbfbf;
     display: none;
 }
@@ -298,7 +315,7 @@ blockquote span {
 #share-img {
     position: absolute;
     display: block;
-    margin: 1em 0 0 11em;
+    margin: 0.2em 0 0 14.2em;
     display: none;
 }
 
@@ -307,18 +324,25 @@ blockquote span {
 }
 
 #login-img {
-    display: block;
     position: absolute;
     z-index: 100;
-    top: 2.2em;
-    left: 9.5em;
+    top: 2.8em;
+    left: 6em;
     display: none;
 }
 
 #html-img,
 #css-img,
-#js-img {
+#js-img,
+#help-img {
     display: none;
+}
+
+#help-img {
+    position: absolute;
+    top: 2.9em;
+    right: -1em;
+    z-index: 100;
 }
 
 
@@ -345,31 +369,39 @@ textarea {
 
 #html,
 #css,
-#javaScript,
+#js,
 #console,
 #output {
     background-color: #f7f7f7;
-    padding: 0.5em 0 0 0;
+    padding: 1em 0 0 0;
     float: left;
 }
 
-#html a,
-#css a,
-#javaScript a {
+#html-link,
+#css-link,
+#js-link {
+    padding: 0.5em;
     font-weight: 700;
+    /*border: 1px solid #222;*/
 }
 
-#html a,
-#css a,
-#javaScript a,
-#console,
-#output {
-    padding-left: 0.5em;
-}
+/* #html a, */
+/* #css a, */
+/* #javaScript a { */
+/*     font-weight: 700; */
+/* } */
+
+/* #html a, */
+/* #css a, */
+/* #javaScript a, */
+/* #console, */
+/* #output { */
+/*     padding-left: 0.5em; */
+/* } */
 
 #html.selected,
 #css.selected,
-#javaScript.selected,
+#js.selected,
 #console.selected,
 #output.selected {
  background-color: #fff;

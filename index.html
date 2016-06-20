@@ -77,8 +77,10 @@
 
         <div id="toolBar-left">
           <div id="menu">
-            <a href="#" id="file">File</a>
+            <div id="file">
+            <a href="#">File</a>
             <img src="img/black_arrow.png" alt="">
+              </div>
             <ul id="file-menu">
               <li><a href="#">New</a></li>
               <li><a href="#">Make bin private<span class="pro">PRO</span></a></li>
@@ -104,18 +106,19 @@
 
         <div id="toolBar-middle">
           <div id="html-view" class="selected"><a href="#">HTML</a></div>
-          <div id="css-view"><a href="#">CSS</a></div>
-          <div id="javaScript-view"><a href="#">JavaScript</a></div>
-          <div id="console-view"><a href="#">Console</a></div>
+          <div id="css-view" class="selected"><a href="#">CSS</a></div>
+          <div id="javaScript-view" class="selected"><a href="#">JavaScript</a></div>
+          <div id="console-view" class="selected"><a href="#">Console</a></div>
           <div id="output-view" class="selected"><a href="#">Output</a></div>
         </div><!-- end toolBar-middle -->
 
         <div id="toolBar-right">
           <div id="toolBar-right-container">
-          <div id="login"><a href="#">Login or Register</a></div>
+          <div id="login"><a href="#" id="login-a">Login or Register</a></div>
           <img id="login-img" src="img/login.png" alt="">
           <div id="blog"><a href="#">Blog</a></div>
-          <div id="help"><a href="#">Help</a></div><!-- Dropdown Menu  -->
+          <div id="help"><a href="#">Help</a></div>
+          <img id="help-img" src="img/help.png" alt="">          
           </div><!-- end toolBar-right-container -->
         </div><!-- end toolBar-right -->
 
@@ -127,7 +130,19 @@
           <div class="selected"><a href="#" id="html-link">HTML</a>
           <img src="img/blue_arrow.png" alt="">
             <img id="html-img" src="img/html.png" alt="">
-            <textarea rows="34" id="htmlCode"></textarea>
+              <textarea rows="38" id="htmlCode">
+                <!DOCTYPE html>
+                <html>
+                  <head>
+                    <meta charset="utf-8">
+                      <meta name="viewport" content="width=device-width">
+                        <title>JS Bin</title>
+                      </head>
+                      <body>
+                        
+                      </body>
+                    </html>
+                  </textarea>
         </div>
       </div><!-- end html codeBlock -->
 
@@ -136,29 +151,29 @@
         <img src="img/blue_arrow.png" alt="">
             <img id="css-img" src="img/css.png" alt="">
       </div>
-        <textarea rows="34" id="cssCode"></textarea>
+        <textarea rows="38" id="cssCode"></textarea>
       </div><!-- end css codeBlock -->
 
-      <div class="codeBlock" id="javaScript">
+      <div class="codeBlock" id="js">
         <div><a href="#" id="js-link">JavaScript</a>
         <img src="img/blue_arrow.png" alt="">
             <img id="js-img" src="img/js.png" alt="">
       </div>
-        <textarea rows="34" id="jsCode"></textarea>
+        <textarea rows="38" id="jsCode"></textarea>
       </div><!-- end js codeBlock -->
 
       <div class="codeBlock" id="console">
         <span>Console</span>
         <img src="img/console_arrow.png" alt="">
         <button name="button" type="button" id="clear">Clear</button>
-        <textarea rows="34"></textarea>
+        <textarea rows="38"></textarea>
       </div><!-- end console codeBlock -->
 
       <div class="codeBlock" id="output">
         <span>Output</span>
           <button name="button" type="button" id="run-js">Run with JS</button>
           <label>Auto-run JS <input type="checkbox" name="auto" value="auto-run-js"></label>
-            <iframe height="760" width="360" id="outputFrame"></iframe>
+            <iframe height="710" width="360" id="outputFrame"></iframe>
           <a href="#" id="bin-info">Bin info</a>
         </div><!-- end output codeBlock -->
 
@@ -171,7 +186,6 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
   </body>
